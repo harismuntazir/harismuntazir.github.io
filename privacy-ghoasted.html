@@ -1,0 +1,209 @@
+<!DOCTYPE html>
+<html lang="en" class="dark">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Ghoasted - Privacy Policy</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@300;400;500;600;700;800;900&display=swap" rel="stylesheet">
+    <script>
+        tailwind.config = {
+            darkMode: 'class',
+            theme: {
+                extend: {
+                    fontFamily: {
+                        sans: ['"Plus Jakarta Sans"', 'sans-serif'],
+                    }
+                }
+            }
+        }
+    </script>
+    <style>
+        html.transition-theme,
+        html.transition-theme *,
+        html.transition-theme *::before,
+        html.transition-theme *::after {
+            transition: background-color 300ms ease, border-color 300ms ease, color 200ms ease !important;
+        }
+    </style>
+</head>
+<body class="bg-white text-zinc-900 dark:bg-black dark:text-zinc-100 min-h-screen selection:bg-sky-500 selection:text-white transition-colors duration-300 antialiased">
+
+    <!-- Header -->
+    <header class="fixed w-full top-0 z-50 bg-white/80 dark:bg-black/80 backdrop-blur-2xl border-b border-zinc-200/80 dark:border-zinc-800/80">
+        <div class="max-w-6xl mx-auto px-6 h-20 flex items-center justify-between">
+            <a href="index.html" class="flex items-center gap-3 group">
+                <div class="w-10 h-10 rounded-2xl bg-zinc-950 dark:bg-white text-white dark:text-black flex items-center justify-center font-black text-xl shadow-md group-hover:scale-105 transition-transform duration-300">
+                    <svg class="w-5 h-5" viewBox="0 0 32 32" fill="currentColor">
+                        <path d="M16 2L2 16l14 14 14-14L16 2zm0 2.828L27.172 16 16 27.172 4.828 16 16 4.828z"/>
+                        <path d="M16 8L8 16l8 8 8-8-8-8zm0 2.828L21.172 16 16 21.172 10.828 16 16 10.828z"/>
+                    </svg>
+                </div>
+                <div class="flex flex-col">
+                    <span class="font-black tracking-[0.15em] text-lg text-zinc-950 dark:text-white">BYTEFY</span>
+                    <span class="text-[10px] tracking-widest text-zinc-400 dark:text-zinc-500 uppercase -mt-1 font-bold">Technologies</span>
+                </div>
+            </a>
+
+            <div class="flex items-center gap-6">
+                <nav class="hidden sm:flex items-center gap-6 text-sm font-semibold text-zinc-600 dark:text-zinc-400">
+                    <a href="index.html" class="hover:text-zinc-950 dark:hover:text-white transition-colors">Home</a>
+                    <a href="terms.html" class="hover:text-zinc-950 dark:hover:text-white transition-colors">Terms of Service</a>
+                    <a href="privacy-ghoasted.html" class="text-sky-500 font-bold">Ghoasted Privacy</a>
+                    <a href="privacy-policy.html" class="hover:text-zinc-950 dark:hover:text-white transition-colors">Main Policy</a>
+                </nav>
+
+                <button id="theme-toggle" aria-label="Toggle Theme" class="w-11 h-11 rounded-2xl border border-zinc-200 dark:border-zinc-800 bg-zinc-100/80 dark:bg-zinc-900/80 hover:bg-zinc-200 dark:hover:bg-zinc-800 text-zinc-700 dark:text-zinc-300 flex items-center justify-center transition-all duration-300 active:scale-95 shadow-sm">
+                    <svg id="sun-icon" class="w-5 h-5 hidden" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2">
+                        <path stroke-linecap="round" stroke-linejoin="round" d="M12 3v1m0 16v1m9-9h-1M4 12H3m15.364 6.364l-.707-.707M6.343 6.343l-.707-.707m12.728 0l-.707.707M6.343 17.657l-.707.707M16 12a4 4 0 11-8 0 4 4 0 018 0z" />
+                    </svg>
+                    <svg id="moon-icon" class="w-5 h-5 hidden" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2">
+                        <path stroke-linecap="round" stroke-linejoin="round" d="M20.354 15.354A9 9 0 018.646 3.646 9.003 9.003 0 0012 21a9.003 9.003 0 008.354-5.646z" />
+                    </svg>
+                </button>
+            </div>
+        </div>
+    </header>
+
+    <!-- Content -->
+    <main class="pt-36 pb-24 px-6 max-w-4xl mx-auto">
+        <div class="text-center mb-12">
+            <div class="inline-flex items-center gap-2 px-3 py-1 rounded-full bg-sky-500/10 text-sky-500 text-xs font-black uppercase tracking-wider mb-3">
+                App Specific Policy
+            </div>
+            <h1 class="text-4xl sm:text-5xl font-black tracking-tight text-zinc-950 dark:text-white mt-1 mb-4">
+                Privacy Policy for Ghoasted
+            </h1>
+            <p class="text-sm text-zinc-500">Package: <strong>hm.bytefy.ghoasted</strong> • Last updated: August 29, 2026</p>
+        </div>
+
+        <div class="space-y-8 bg-zinc-50/80 dark:bg-zinc-900/60 border border-zinc-200/80 dark:border-zinc-800/80 p-8 sm:p-12 rounded-3xl shadow-xl backdrop-blur-xl leading-relaxed text-zinc-700 dark:text-zinc-300">
+            
+            <section>
+                <h2 class="text-2xl font-bold text-zinc-950 dark:text-white mb-3">1. Privacy First Architecture</h2>
+                <p>
+                    <strong>Ghoasted</strong> is developed by <strong>ByteFy</strong> as an on-device digital discipline and app blocking utility. We strictly adhere to minimal data access principles. All rule evaluations, location boundaries, and cooldown timers execute 100% locally on your Android device.
+                </p>
+            </section>
+
+            <section>
+                <h2 class="text-2xl font-bold text-zinc-950 dark:text-white mb-3">2. Google User Data & Google Drive AppData Scope</h2>
+                <p class="mb-4">
+                    Ghoasted offers an optional cloud backup and restore feature ("Cloud Vault") allowing users to synchronize their app lock rules across installations.
+                </p>
+                <div class="bg-zinc-100 dark:bg-zinc-800/50 p-6 rounded-2xl border border-zinc-200 dark:border-zinc-700/60 space-y-3">
+                    <h3 class="text-base font-bold text-sky-500 dark:text-sky-400">Exclusive Scope: <code>https://www.googleapis.com/auth/drive.appdata</code></h3>
+                    <ul class="list-disc list-inside text-sm space-y-2 text-zinc-600 dark:text-zinc-300">
+                        <li><strong>Sandbox Storage:</strong> This scope isolates your backup data within a private, hidden application data folder that only Ghoasted can access.</li>
+                        <li><strong>Zero Access to Personal Files:</strong> Ghoasted cannot access, view, read, index, modify, or delete any of your personal Google Drive documents, photos, sheets, or existing files.</li>
+                        <li><strong>Data Stored:</strong> Only your self-configured app lock rules, schedules, reward ratios, and group structures are serialized into the JSON backup package.</li>
+                        <li><strong>No Third-Party Transmission:</strong> Your Google authentication tokens and backup packages are never routed through any external servers.</li>
+                    </ul>
+                </div>
+            </section>
+
+            <section>
+                <h2 class="text-2xl font-bold text-zinc-950 dark:text-white mb-3">3. Android Permissions & Local Operation</h2>
+                <p class="mb-4">All permissions are executed strictly on your local device to enforce focus rules:</p>
+                
+                <div class="space-y-4">
+                    <div class="bg-zinc-100/60 dark:bg-zinc-800/30 p-5 rounded-2xl border border-zinc-200 dark:border-zinc-800">
+                        <h4 class="font-bold text-zinc-950 dark:text-white">Accessibility Service (BIND_ACCESSIBILITY_SERVICE)</h4>
+                        <p class="text-sm text-zinc-600 dark:text-zinc-400 mt-1">
+                            Used solely to detect when a locked application is launched to present the blocking overlay or initiate a productive redirect. It does not monitor keystrokes or record screen content.
+                        </p>
+                    </div>
+
+                    <div class="bg-zinc-100/60 dark:bg-zinc-800/30 p-5 rounded-2xl border border-zinc-200 dark:border-zinc-800">
+                        <h4 class="font-bold text-zinc-950 dark:text-white">Device Administrator (BIND_DEVICE_ADMIN)</h4>
+                        <p class="text-sm text-zinc-600 dark:text-zinc-400 mt-1">
+                            Used exclusively to safeguard active focus sessions from premature uninstallation when the Self-Discipline shield is active.
+                        </p>
+                    </div>
+
+                    <div class="bg-zinc-100/60 dark:bg-zinc-800/30 p-5 rounded-2xl border border-zinc-200 dark:border-zinc-800">
+                        <h4 class="font-bold text-zinc-950 dark:text-white">Location (ACCESS_FINE_LOCATION)</h4>
+                        <p class="text-sm text-zinc-600 dark:text-zinc-400 mt-1">
+                            Used on-device only to check whether you are inside or outside a configured geofence radius. Coordinates are never saved or sent to any server.
+                        </p>
+                    </div>
+
+                    <div class="bg-zinc-100/60 dark:bg-zinc-800/30 p-5 rounded-2xl border border-zinc-200 dark:border-zinc-800">
+                        <h4 class="font-bold text-zinc-950 dark:text-white">Notification Listener (BIND_NOTIFICATION_LISTENER_SERVICE)</h4>
+                        <p class="text-sm text-zinc-600 dark:text-zinc-400 mt-1">
+                            Used to automatically mute and dismiss incoming notifications from apps during their active lockdown states.
+                        </p>
+                    </div>
+                </div>
+            </section>
+
+            <section>
+                <h2 class="text-2xl font-bold text-zinc-950 dark:text-white mb-3">4. Data Deletion</h2>
+                <p>
+                    You can remove your cloud backup at any time via your Google Account's Drive App Management settings or by clearing data within the application.
+                </p>
+            </section>
+
+            <section>
+                <h2 class="text-2xl font-bold text-zinc-950 dark:text-white mb-3">5. Contact Us</h2>
+                <p>
+                    If you have questions about this policy, contact us at: <a href="mailto:storex.hm@gmail.com" class="text-sky-500 font-semibold hover:underline">storex.hm@gmail.com</a>
+                </p>
+            </section>
+
+        </div>
+    </main>
+
+    <!-- Footer -->
+    <footer class="border-t border-zinc-200 dark:border-zinc-800 py-12 px-6 bg-white dark:bg-black transition-colors text-center text-sm text-zinc-500">
+        <div class="max-w-6xl mx-auto flex flex-col sm:flex-row items-center justify-between gap-4">
+            <p>© 2026 ByteFy Technologies. All rights reserved.</p>
+            <div class="flex gap-6 font-medium">
+                <a href="index.html" class="hover:text-zinc-900 dark:hover:text-white">Home</a>
+                <a href="privacy-policy.html" class="hover:text-zinc-900 dark:hover:text-white">Main Privacy Policy</a>
+                <a href="terms.html" class="hover:text-zinc-900 dark:hover:text-white">Terms of Service</a>
+                <a href="mailto:storex.hm@gmail.com" class="hover:text-zinc-900 dark:hover:text-white">Contact</a>
+            </div>
+        </div>
+    </footer>
+
+    <!-- Theme Logic -->
+    <script>
+        const html = document.documentElement;
+        const themeToggle = document.getElementById('theme-toggle');
+        const sunIcon = document.getElementById('sun-icon');
+        const moonIcon = document.getElementById('moon-icon');
+
+        function updateThemeIcons(isDark) {
+            if (isDark) {
+                sunIcon.classList.remove('hidden');
+                moonIcon.classList.add('hidden');
+            } else {
+                sunIcon.classList.add('hidden');
+                moonIcon.classList.remove('hidden');
+            }
+        }
+
+        const storedTheme = localStorage.getItem('theme');
+        const systemPrefersDark = window.matchMedia('(prefers-color-scheme: dark)').matches;
+        const isInitialDark = storedTheme === 'dark' || (!storedTheme && systemPrefersDark);
+
+        if (isInitialDark) {
+            html.classList.add('dark');
+        } else {
+            html.classList.remove('dark');
+        }
+        updateThemeIcons(isInitialDark);
+
+        themeToggle.addEventListener('click', () => {
+            html.classList.add('transition-theme');
+            const isDark = html.classList.toggle('dark');
+            localStorage.setItem('theme', isDark ? 'dark' : 'light');
+            updateThemeIcons(isDark);
+            setTimeout(() => html.classList.remove('transition-theme'), 350);
+        });
+    </script>
+</body>
+</html>

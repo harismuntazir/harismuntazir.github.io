@@ -1,223 +1,306 @@
 <!DOCTYPE html>
-<html lang="en" class="dark">
+<html lang="en">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>ByteFy - Privacy Policy</title>
     <script src="https://cdn.tailwindcss.com"></script>
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@300;400;500;600;700;800;900&display=swap" rel="stylesheet">
-    <script>
-        tailwind.config = {
-            darkMode: 'class',
-            theme: {
-                extend: {
-                    fontFamily: {
-                        sans: ['"Plus Jakarta Sans"', 'sans-serif'],
-                    }
-                }
-            }
-        }
-    </script>
+    <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
     <style>
-        html.transition-theme,
-        html.transition-theme *,
-        html.transition-theme *::before,
-        html.transition-theme *::after {
-            transition: background-color 300ms ease, border-color 300ms ease, color 200ms ease !important;
+        /* Custom styles in addition to Tailwind */
+        body {
+            font-family: 'Inter', sans-serif; /* Ensure Inter font is applied */
+        }
+
+        .radial-gradient-animation {
+            background: radial-gradient(circle at 50% 50%, rgba(56, 189, 248, 0.15), transparent 60%);
+            animation: pulse 6s infinite;
+        }
+
+        @keyframes pulse {
+            0%, 100% { opacity: 0.8; transform: scale(1); }
+            50% { opacity: 0.4; transform: scale(1.1); }
         }
     </style>
 </head>
-<body class="bg-white text-zinc-900 dark:bg-black dark:text-zinc-100 min-h-screen selection:bg-sky-500 selection:text-white transition-colors duration-300 antialiased">
+<body class="bg-gray-950 text-gray-300">
+    <header class="fixed w-full bg-gray-900/70 backdrop-blur-xl z-50 shadow-lg">
+        <nav class="container mx-auto px-4 py-4 flex justify-between items-center">
+            <a href="index.html#home" class="flex items-center gap-2">
+                <svg class="w-8 h-8 text-sky-500" viewBox="0 0 32 32" fill="currentColor">
+                    <path d="M16 2L2 16l14 14 14-14L16 2zm0 2.828L27.172 16 16 27.172 4.828 16 16 4.828z"/>
+                    <path d="M16 8L8 16l8 8 8-8-8-8zm0 2.828L21.172 16 16 21.172 10.828 16 16 10.828z"/>
+                </svg>
+                <span class="text-white font-bold text-xl">ByteFy</span>
+            </a>
+            
+            <div class="hidden md:flex gap-8">
+                <a href="index.html#services" class="hover:text-sky-400 transition-colors">Services</a>
+                <a href="index.html#products" class="hover:text-sky-400 transition-colors">Tools</a>
+                <a href="index.html#store" class="hover:text-sky-400 transition-colors">Store</a>
+                <a href="index.html#contact" class="hover:text-sky-400 transition-colors">Contact</a>
+            </div>
 
-    <!-- Header -->
-    <header class="fixed w-full top-0 z-50 bg-white/80 dark:bg-black/80 backdrop-blur-2xl border-b border-zinc-200/80 dark:border-zinc-800/80">
-        <div class="max-w-6xl mx-auto px-6 h-20 flex items-center justify-between">
-            <a href="index.html" class="flex items-center gap-3 group">
-                <div class="w-10 h-10 rounded-2xl bg-zinc-950 dark:bg-white text-white dark:text-black flex items-center justify-center font-black text-xl shadow-md group-hover:scale-105 transition-transform duration-300">
-                    <svg class="w-5 h-5" viewBox="0 0 32 32" fill="currentColor">
+            <button id="mobile-menu-button" class="md:hidden p-2 rounded-md text-gray-400 hover:text-white hover:bg-gray-700 focus:outline-none focus:ring-2 focus:ring-inset focus:ring-white" aria-expanded="false">
+                <span class="sr-only">Open main menu</span>
+                <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h16"/>
+                </svg>
+            </button>
+        </nav>
+    </header>
+
+    <div id="mobile-menu-items" class="fixed top-16 right-0 bg-gray-900/95 backdrop-blur-xl w-48 py-4 hidden md:hidden shadow-xl rounded-bl-lg z-40">
+        <div class="flex flex-col gap-4 px-4">
+            <a href="index.html#services" class="block px-3 py-2 rounded-md text-base font-medium text-gray-300 hover:text-sky-400 hover:bg-gray-700">Services</a>
+            <a href="index.html#products" class="block px-3 py-2 rounded-md text-base font-medium text-gray-300 hover:text-sky-400 hover:bg-gray-700">Tools</a>
+            <a href="index.html#store" class="block px-3 py-2 rounded-md text-base font-medium text-gray-300 hover:text-sky-400 hover:bg-gray-700">Store</a>
+            <a href="index.html#contact" class="block px-3 py-2 rounded-md text-base font-medium text-gray-300 hover:text-sky-400 hover:bg-gray-700">Contact</a>
+        </div>
+    </div>
+
+    <section class="pt-32 pb-20 px-4 relative overflow-hidden">
+        <div class="absolute inset-0 radial-gradient-animation"></div>
+        <div class="container mx-auto max-w-4xl relative z-10">
+            <div class="text-center mb-12" data-aos="fade-up">
+                <h1 class="text-4xl md:text-5xl font-bold mb-4">
+                    <span class="bg-gradient-to-r from-sky-400 to-blue-600 bg-clip-text text-transparent">
+                        Privacy Policy
+                    </span>
+                </h1>
+                <p class="text-xl text-gray-400 mt-4">Last updated: March 14, 2024</p>
+            </div>
+            
+            <div class="bg-gray-800/60 backdrop-blur-lg p-8 rounded-2xl shadow-xl mb-10" data-aos="fade-up" data-aos-delay="100">
+                <div class="prose prose-lg prose-invert max-w-none">
+                    <p class="mb-6">
+                        This Privacy Policy describes Our policies and procedures on the collection, use and disclosure of Your information when You use the Service and tells You about Your privacy rights and how the law protects You.
+                    </p>
+                    <p class="mb-6">
+                        We use Your Personal data to provide and improve the Service. By using the Service, You agree to the collection and use of information in accordance with this Privacy Policy.
+                    </p>
+                    
+                    <h2 class="text-2xl font-bold text-white mt-8 mb-4">Policy For Following Apps</h2>
+                    <ol class="list-decimal list-inside mb-6 ml-4">
+                        <li class="mb-2">Logs Calculator</li>
+                        <li class="mb-2">PurchLog</li>
+                        <li class="mb-2">Omnivert</li>
+                        <li class="mb-2">In Out</li>
+                    </ol>
+                    
+                    <h2 class="text-2xl font-bold text-white mt-8 mb-4">Interpretation and Definitions</h2>
+                    
+                    <h3 class="text-xl font-bold text-white mt-6 mb-3">Interpretation</h3>
+                    <p class="mb-6">
+                        The words of which the initial letter is capitalized have meanings defined under the following conditions. The following definitions shall have the same meaning regardless of whether they appear in singular or in plural.
+                    </p>
+                    
+                    <h3 class="text-xl font-bold text-white mt-6 mb-3">Definitions</h3>
+                    <p class="mb-4">For the purposes of this Privacy Policy:</p>
+                    <ul class="list-disc list-inside mb-6 ml-4 space-y-2">
+                        <li><strong>Account</strong> means a unique account created for You to access our Service or parts of our Service.</li>
+                        <li><strong>Affiliate</strong> means an entity that controls, is controlled by or is under common control with a party, where "control" means ownership of 50% or more of the shares, equity interest or other securities entitled to vote for election of directors or other managing authority.</li>
+                        <li><strong>Application</strong> refers to Logs Calculator and other applications listed, the software programs provided by the Company.</li>
+                        <li><strong>Company</strong> (referred to as either "the Company", "We", "Us" or "Our" in this Agreement) refers to ByteFy.</li>
+                        <li><strong>Country</strong> refers to: Jammu and Kashmir, India</li>
+                        <li><strong>Device</strong> means any device that can access the Service such as a computer, a cellphone or a digital tablet.</li>
+                        <li><strong>Personal Data</strong> is any information that relates to an identified or identifiable individual.</li>
+                        <li><strong>Service</strong> refers to the Application.</li>
+                        <li><strong>Service Provider</strong> means any natural or legal person who processes the data on behalf of the Company. It refers to third-party companies or individuals employed by the Company to facilitate the Service, to provide the Service on behalf of the Company, to perform services related to the Service or to assist the Company in analyzing how the Service is used.</li>
+                        <li><strong>Usage Data</strong> refers to data collected automatically, either generated by the use of the Service or from the Service infrastructure itself (for example, the duration of a page visit).</li>
+                        <li><strong>You</strong> means the individual accessing or using the Service, or the company, or other legal entity on behalf of which such individual is accessing or using the Service, as applicable.</li>
+                    </ul>
+                    
+                    <h2 class="text-2xl font-bold text-white mt-8 mb-4">Collecting and Using Your Personal Data</h2>
+                    
+                    <h3 class="text-xl font-bold text-white mt-6 mb-3">Types of Data Collected</h3>
+                    
+                    <h4 class="text-lg font-bold text-white mt-4 mb-2">Personal Data</h4>
+                    <p class="mb-4">
+                        While using Our Service, We may ask You to provide Us with certain personally identifiable information that can be used to contact or identify You. Personally identifiable information may include, but is not limited to:
+                    </p>
+                    <ul class="list-disc list-inside mb-6 ml-4">
+                        <li>Phone number</li>
+                        <li>Usage Data</li>
+                    </ul>
+                    
+                    <h4 class="text-lg font-bold text-white mt-4 mb-2">Usage Data</h4>
+                    <p class="mb-4">
+                        Usage Data is collected automatically when using the Service.
+                    </p>
+                    <p class="mb-6">
+                        Usage Data may include information such as Your Device's Internet Protocol address (e.g. IP address), browser type, browser version, the pages of our Service that You visit, the time and date of Your visit, the time spent on those pages, unique device identifiers and other diagnostic data.
+                    </p>
+                    <p class="mb-6">
+                        When You access the Service by or through a mobile device, We may collect certain information automatically, including, but not limited to, the type of mobile device You use, Your mobile device unique ID, the IP address of Your mobile device, Your mobile operating system, the type of mobile Internet browser You use, unique device identifiers and other diagnostic data.
+                    </p>
+                    <p class="mb-6">
+                        We may also collect information that Your browser sends whenever You visit our Service or when You access the Service by or through a mobile device.
+                    </p>
+                    
+                    <h3 class="text-xl font-bold text-white mt-6 mb-3">Use of Your Personal Data</h3>
+                    <p class="mb-4">
+                        The Company may use Personal Data for the following purposes:
+                    </p>
+                    <ul class="list-disc list-inside mb-6 ml-4 space-y-2">
+                        <li><strong>To provide and maintain our Service</strong>, including to monitor the usage of our Service.</li>
+                        <li><strong>To manage Your Account:</strong> to manage Your registration as a user of the Service. The Personal Data You provide can give You access to different functionalities of the Service that are available to You as a registered user.</li>
+                        <li><strong>For the performance of a contract:</strong> the development, compliance and undertaking of the purchase contract for the products, items or services You have purchased or of any other contract with Us through the Service.</li>
+                    </ul>
+                    <p class="mb-6">
+                        We don't share any of the information that we gather from you.
+                    </p>
+                    
+                    <h3 class="text-xl font-bold text-white mt-6 mb-3">Retention of Your Personal Data</h3>
+                    <p class="mb-6">
+                        The Company will retain Your Personal Data only for as long as is necessary for the purposes set out in this Privacy Policy. We will retain and use Your Personal Data to the extent necessary to comply with our legal obligations (for example, if we are required to retain your data to comply with applicable laws), resolve disputes, and enforce our legal agreements and policies.
+                    </p>
+                    <p class="mb-6">
+                        The Company will also retain Usage Data for internal analysis purposes. Usage Data is generally retained for a shorter period of time, except when this data is used to strengthen the security or to improve the functionality of Our Service, or We are legally obligated to retain this data for longer time periods.
+                    </p>
+                    
+                    <h4 class="text-lg font-bold text-white mt-4 mb-2">Deletion Of Personal Data</h4>
+                    <p class="mb-6">
+                        If any user wants to delete their data or their account they may contact us here at <a href="mailto:haris.0813.m@gmail.com" class="text-sky-400 hover:text-sky-300">haris.0813.m@gmail.com</a>. After receiving a true request all requested data will be deleted in seven working days.
+                    </p>
+                    
+                    <h3 class="text-xl font-bold text-white mt-6 mb-3">Transfer of Your Personal Data</h3>
+                    <p class="mb-6">
+                        Your information, including Personal Data, is processed at the Company's operating offices and in any other places where the parties involved in the processing are located. It means that this information may be transferred to — and maintained on — computers located outside of Your state, province, country or other governmental jurisdiction where the data protection laws may differ than those from Your jurisdiction.
+                    </p>
+                    <p class="mb-6">
+                        Your consent to this Privacy Policy followed by Your submission of such information represents Your agreement to that transfer.
+                    </p>
+                    <p class="mb-6">
+                        The Company will take all steps reasonably necessary to ensure that Your data is treated securely and in accordance with this Privacy Policy and no transfer of Your Personal Data will take place to an organization or a country unless there are adequate controls in place including the security of Your data and other personal information.
+                    </p>
+                    
+                    <h3 class="text-xl font-bold text-white mt-6 mb-3">Delete Your Personal Data</h3>
+                    <p class="mb-4">
+                        You have the right to delete or request that We assist in deleting the Personal Data that We have collected about You.
+                    </p>
+                    <p class="mb-6">
+                        Our Service may give You the ability to delete certain information about You from within the Service.
+                    </p>
+                    <p class="mb-6">
+                        You may update, amend, or delete Your information at any time by signing in to Your Account, if you have one, and visiting the account settings section that allows you to manage Your personal information. You may also contact Us to request access to, correct, or delete any personal information that You have provided to Us.
+                    </p>
+                    <p class="mb-6">
+                        Please note, however, that We may need to retain certain information when we have a legal obligation or lawful basis to do so.
+                    </p>
+                    
+                    <h3 class="text-xl font-bold text-white mt-6 mb-3">Disclosure of Your Personal Data</h3>
+                    
+                    <h4 class="text-lg font-bold text-white mt-4 mb-2">Business Transactions</h4>
+                    <p class="mb-6">
+                        If the Company is involved in a merger, acquisition or asset sale, Your Personal Data may be transferred. We will provide notice before Your Personal Data is transferred and becomes subject to a different Privacy Policy.
+                    </p>
+                    
+                    <h4 class="text-lg font-bold text-white mt-4 mb-2">Law enforcement</h4>
+                    <p class="mb-6">
+                        Under certain circumstances, the Company may be required to disclose Your Personal Data if required to do so by law or in response to valid requests by public authorities (e.g. a court or a government agency).
+                    </p>
+                    
+                    <h4 class="text-lg font-bold text-white mt-4 mb-2">Other legal requirements</h4>
+                    <p class="mb-4">
+                        The Company may disclose Your Personal Data in the good faith belief that such action is necessary to:
+                    </p>
+                    <ul class="list-disc list-inside mb-6 ml-4">
+                        <li>Comply with a legal obligation</li>
+                        <li>Protect and defend the rights or property of the Company</li>
+                        <li>Prevent or investigate possible wrongdoing in connection with the Service</li>
+                        <li>Protect the personal safety of Users of the Service or the public</li>
+                        <li>Protect against legal liability</li>
+                    </ul>
+                    
+                    <h3 class="text-xl font-bold text-white mt-6 mb-3">Security of Your Personal Data</h3>
+                    <p class="mb-6">
+                        The security of Your Personal Data is important to Us, but remember that no method of transmission over the Internet, or method of electronic storage is 100% secure. While We strive to use commercially acceptable means to protect Your Personal Data, We cannot guarantee its absolute security.
+                    </p>
+                    
+                    <h3 class="text-xl font-bold text-white mt-6 mb-3">Children's Privacy</h3>
+                    <p class="mb-6">
+                        Our Service does not address anyone under the age of 13. We do not knowingly collect personally identifiable information from anyone under the age of 13. If You are a parent or guardian and You are aware that Your child has provided Us with Personal Data, please contact Us. If We become aware that We have collected Personal Data from anyone under the age of 13 without verification of parental consent, We take steps to remove that information from Our servers.
+                    </p>
+                    <p class="mb-6">
+                        If We need to rely on consent as a legal basis for processing Your information and Your country requires consent from a parent, We may require Your parent's consent before We collect and use that information.
+                    </p>
+                    
+                    <h3 class="text-xl font-bold text-white mt-6 mb-3">Links to Other Websites</h3>
+                    <p class="mb-6">
+                        Our Service may contain links to other websites that are not operated by Us. If You click on a third party link, You will be directed to that third party's site. We strongly advise You to review the Privacy Policy of every site You visit.
+                    </p>
+                    <p class="mb-6">
+                        We have no control over and assume no responsibility for the content, privacy policies or practices of any third party sites or services.
+                    </p>
+                    
+                    <h3 class="text-xl font-bold text-white mt-6 mb-3">Changes to this Privacy Policy</h3>
+                    <p class="mb-6">
+                        We may update Our Privacy Policy from time to time. We will notify You of any changes by posting the new Privacy Policy on this page.
+                    </p>
+                    <p class="mb-6">
+                        We will let You know via email and/or a prominent notice on Our Service, prior to the change becoming effective and update the "Last updated" date at the top of this Privacy Policy.
+                    </p>
+                    <p class="mb-6">
+                        You are advised to review this Privacy Policy periodically for any changes. Changes to this Privacy Policy are effective when they are posted on this page.
+                    </p>
+                    
+                    <h3 class="text-xl font-bold text-white mt-6 mb-3">Contact Us</h3>
+                    <p class="mb-4">
+                        If you have any questions about this Privacy Policy, You can contact us:
+                    </p>
+                    <ul class="list-disc list-inside mb-6 ml-4">
+                        <li>By email: <a href="mailto:haris.0813.m@gmail.com" class="text-sky-400 hover:text-sky-300">haris.0813.m@gmail.com</a></li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <footer class="bg-gray-900 border-t border-gray-800/50">
+        <div class="container mx-auto px-4 py-10 text-center">
+            <div class="mb-6">
+                <a href="index.html#home" class="flex items-center justify-center gap-2 mb-4 group">
+                    <svg class="w-8 h-8 text-sky-500 group-hover:text-sky-400 transition-colors" viewBox="0 0 32 32" fill="currentColor">
                         <path d="M16 2L2 16l14 14 14-14L16 2zm0 2.828L27.172 16 16 27.172 4.828 16 16 4.828z"/>
                         <path d="M16 8L8 16l8 8 8-8-8-8zm0 2.828L21.172 16 16 21.172 10.828 16 16 10.828z"/>
                     </svg>
-                </div>
-                <div class="flex flex-col">
-                    <span class="font-black tracking-[0.15em] text-lg text-zinc-950 dark:text-white">BYTEFY</span>
-                    <span class="text-[10px] tracking-widest text-zinc-400 dark:text-zinc-500 uppercase -mt-1 font-bold">Technologies</span>
-                </div>
-            </a>
-
-            <div class="flex items-center gap-6">
-                <nav class="hidden sm:flex items-center gap-6 text-sm font-semibold text-zinc-600 dark:text-zinc-400">
-                    <a href="index.html" class="hover:text-zinc-950 dark:hover:text-white transition-colors">Home</a>
-                    <a href="terms.html" class="hover:text-zinc-950 dark:hover:text-white transition-colors">Terms of Service</a>
-                    <a href="privacy-policy.html" class="text-sky-500 font-bold">Privacy Policy</a>
-                </nav>
-
-                <!-- Theme Toggle Button -->
-                <button id="theme-toggle" aria-label="Toggle Theme" class="w-11 h-11 rounded-2xl border border-zinc-200 dark:border-zinc-800 bg-zinc-100/80 dark:bg-zinc-900/80 hover:bg-zinc-200 dark:hover:bg-zinc-800 text-zinc-700 dark:text-zinc-300 flex items-center justify-center transition-all duration-300 active:scale-95 shadow-sm">
-                    <svg id="sun-icon" class="w-5 h-5 hidden" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2">
-                        <path stroke-linecap="round" stroke-linejoin="round" d="M12 3v1m0 16v1m9-9h-1M4 12H3m15.364 6.364l-.707-.707M6.343 6.343l-.707-.707m12.728 0l-.707.707M6.343 17.657l-.707.707M16 12a4 4 0 11-8 0 4 4 0 018 0z" />
-                    </svg>
-                    <svg id="moon-icon" class="w-5 h-5 hidden" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2">
-                        <path stroke-linecap="round" stroke-linejoin="round" d="M20.354 15.354A9 9 0 018.646 3.646 9.003 9.003 0 0012 21a9.003 9.003 0 008.354-5.646z" />
-                    </svg>
-                </button>
+                    <span class="text-white font-bold text-xl group-hover:text-sky-400 transition-colors">ByteFy</span>
+                </a>
+                <p class="text-gray-400 text-sm">Innovate. Create. Inspire.</p>
             </div>
-        </div>
-    </header>
-
-    <!-- Content -->
-    <main class="pt-36 pb-24 px-6 max-w-4xl mx-auto">
-        <div class="text-center mb-12">
-            <span class="text-xs font-black tracking-widest text-sky-500 uppercase">Privacy & Data Governance</span>
-            <h1 class="text-4xl sm:text-5xl font-black tracking-tight text-zinc-950 dark:text-white mt-2 mb-4">
-                Privacy Policy
-            </h1>
-            <p class="text-sm text-zinc-500">Effective Date: August 29, 2026 • Published by ByteFy Technologies</p>
-        </div>
-
-        <div class="space-y-8 bg-zinc-50/80 dark:bg-zinc-900/60 border border-zinc-200/80 dark:border-zinc-800/80 p-8 sm:p-12 rounded-3xl shadow-xl backdrop-blur-xl leading-relaxed text-zinc-700 dark:text-zinc-300">
-            
-            <section>
-                <h2 class="text-2xl font-bold text-zinc-950 dark:text-white mb-3">1. Scope of This Policy</h2>
-                <p class="mb-4">
-                    This Privacy Policy applies to all mobile applications, software tools, and digital services developed and operated by <strong>ByteFy</strong> ("we", "us", or "our"), including:
-                </p>
-                <div class="grid sm:grid-cols-2 gap-3 mb-4">
-                    <div class="p-3.5 rounded-2xl bg-white dark:bg-zinc-800/50 border border-zinc-200 dark:border-zinc-700/60 text-sm font-semibold flex items-center gap-2">
-                        <span class="text-sky-500 font-bold">1.</span> Ghoasted (hm.bytefy.ghoasted)
-                    </div>
-                    <div class="p-3.5 rounded-2xl bg-white dark:bg-zinc-800/50 border border-zinc-200 dark:border-zinc-700/60 text-sm font-semibold flex items-center gap-2">
-                        <span class="text-sky-500 font-bold">2.</span> Purchi (purchi.vercel.app)
-                    </div>
-                    <div class="p-3.5 rounded-2xl bg-white dark:bg-zinc-800/50 border border-zinc-200 dark:border-zinc-700/60 text-sm font-semibold flex items-center gap-2">
-                        <span class="text-sky-500 font-bold">3.</span> Logs Calculator
-                    </div>
-                    <div class="p-3.5 rounded-2xl bg-white dark:bg-zinc-800/50 border border-zinc-200 dark:border-zinc-700/60 text-sm font-semibold flex items-center gap-2">
-                        <span class="text-sky-500 font-bold">4.</span> Omnivert
-                    </div>
-                    <div class="p-3.5 rounded-2xl bg-white dark:bg-zinc-800/50 border border-zinc-200 dark:border-zinc-700/60 text-sm font-semibold flex items-center gap-2">
-                        <span class="text-sky-500 font-bold">5.</span> In Out
-                    </div>
-                </div>
-            </section>
-
-            <section id="ghoasted">
-                <h2 class="text-2xl font-bold text-zinc-950 dark:text-white mb-3">2. Google User Data & Google Drive AppData Scope (Ghoasted App)</h2>
-                <p class="mb-4">
-                    For users of <strong>Ghoasted</strong> who choose to enable the optional Cloud Vault feature, the application interfaces with Google Play Services and the Google Drive REST API.
-                </p>
-                <div class="bg-zinc-100 dark:bg-zinc-800/50 p-6 rounded-2xl border border-zinc-200 dark:border-zinc-700/60 space-y-3">
-                    <h3 class="text-base font-bold text-sky-500 dark:text-sky-400">Exclusive Scope: <code>https://www.googleapis.com/auth/drive.appdata</code></h3>
-                    <ul class="list-disc list-inside text-sm space-y-2 text-zinc-600 dark:text-zinc-300">
-                        <li><strong>Application-Specific Sandbox:</strong> This scope isolates your backup data within a hidden, dedicated application folder in your Google Drive storage that only Ghoasted can access.</li>
-                        <li><strong>No Access to Personal Drive Files:</strong> The application does not and cannot access, view, read, index, modify, or delete any of your personal Google Drive documents, photos, sheets, or existing files.</li>
-                        <li><strong>Data Stored in Backup:</strong> Only your self-configured app lock rules, schedules, reward ratios, and group structures are serialized into the JSON backup package.</li>
-                        <li><strong>Zero External Sharing:</strong> Your Google user data, authentication tokens, and backup files are never transmitted to ByteFy servers or any third parties.</li>
-                    </ul>
-                </div>
-            </section>
-
-            <section>
-                <h2 class="text-2xl font-bold text-zinc-950 dark:text-white mb-3">3. Android Permissions & Local Operation</h2>
-                <p class="mb-4">Our applications operate strictly on-device. The following Android permissions are used strictly to deliver local functionality:</p>
-                
-                <div class="space-y-4">
-                    <div class="bg-zinc-100/60 dark:bg-zinc-800/30 p-5 rounded-2xl border border-zinc-200 dark:border-zinc-800">
-                        <h4 class="font-bold text-zinc-950 dark:text-white">Accessibility Service (BIND_ACCESSIBILITY_SERVICE)</h4>
-                        <p class="text-sm text-zinc-600 dark:text-zinc-400 mt-1">
-                            Used exclusively by Ghoasted to detect when a locked application is launched to present focus overlays or trigger redirects. It does not monitor keystrokes or inspect personal user content.
-                        </p>
-                    </div>
-
-                    <div class="bg-zinc-100/60 dark:bg-zinc-800/30 p-5 rounded-2xl border border-zinc-200 dark:border-zinc-800">
-                        <h4 class="font-bold text-zinc-950 dark:text-white">Device Administrator (BIND_DEVICE_ADMIN)</h4>
-                        <p class="text-sm text-zinc-600 dark:text-zinc-400 mt-1">
-                            Used solely to safeguard active focus sessions from premature uninstallation while the Self-Discipline shield is active.
-                        </p>
-                    </div>
-
-                    <div class="bg-zinc-100/60 dark:bg-zinc-800/30 p-5 rounded-2xl border border-zinc-200 dark:border-zinc-800">
-                        <h4 class="font-bold text-zinc-950 dark:text-white">Location (ACCESS_FINE_LOCATION)</h4>
-                        <p class="text-sm text-zinc-600 dark:text-zinc-400 mt-1">
-                            Used on-device only for geofencing enforcement (e.g. blocking apps inside/outside specific zones). Coordinates are never stored or transmitted.
-                        </p>
-                    </div>
-
-                    <div class="bg-zinc-100/60 dark:bg-zinc-800/30 p-5 rounded-2xl border border-zinc-200 dark:border-zinc-800">
-                        <h4 class="font-bold text-zinc-950 dark:text-white">Notification Listener (BIND_NOTIFICATION_LISTENER_SERVICE)</h4>
-                        <p class="text-sm text-zinc-600 dark:text-zinc-400 mt-1">
-                            Used to automatically silence and dismiss incoming notifications from apps that are currently in an active lockdown state.
-                        </p>
-                    </div>
-                </div>
-            </section>
-
-            <section>
-                <h2 class="text-2xl font-bold text-zinc-950 dark:text-white mb-3">4. Offline Calculations & Data Retention</h2>
-                <p>
-                    For calculation and utility apps (Logs Calculator, PurchLog, Omnivert, In Out), all calculation histories, logs, expense receipts, and currency conversions are stored entirely offline on the user's device in local databases (SQLite/Room) and are erased when the app is cleared or uninstalled.
-                </p>
-            </section>
-
-            <section>
-                <h2 class="text-2xl font-bold text-zinc-950 dark:text-white mb-3">5. Contact Information</h2>
-                <p>
-                    If you have questions about this privacy policy or any ByteFy applications, please contact us at: <a href="mailto:storex.hm@gmail.com" class="text-sky-500 font-semibold hover:underline">storex.hm@gmail.com</a>
-                </p>
-            </section>
-
-        </div>
-    </main>
-
-    <!-- Footer -->
-    <footer class="border-t border-zinc-200 dark:border-zinc-800 py-12 px-6 bg-white dark:bg-black transition-colors text-center text-sm text-zinc-500">
-        <div class="max-w-6xl mx-auto flex flex-col sm:flex-row items-center justify-between gap-4">
-            <p>© 2026 ByteFy Technologies. All rights reserved.</p>
-            <div class="flex gap-6 font-medium">
-                <a href="index.html" class="hover:text-zinc-900 dark:hover:text-white">Home</a>
-                <a href="terms.html" class="hover:text-zinc-900 dark:hover:text-white">Terms of Service</a>
-                <a href="mailto:storex.hm@gmail.com" class="hover:text-zinc-900 dark:hover:text-white">Contact</a>
-            </div>
+            <p class="text-gray-500 text-sm mb-2">84, Moman, Anantnag, Jammu and Kashmir, 192124</p>
+            <p class="text-gray-500 text-sm">&copy; <span id="year"></span> ByteFy. All rights reserved.</p>
         </div>
     </footer>
 
-    <!-- Theme Logic -->
+    <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
     <script>
-        const html = document.documentElement;
-        const themeToggle = document.getElementById('theme-toggle');
-        const sunIcon = document.getElementById('sun-icon');
-        const moonIcon = document.getElementById('moon-icon');
-
-        function updateThemeIcons(isDark) {
-            if (isDark) {
-                sunIcon.classList.remove('hidden');
-                moonIcon.classList.add('hidden');
-            } else {
-                sunIcon.classList.add('hidden');
-                moonIcon.classList.remove('hidden');
-            }
-        }
-
-        const storedTheme = localStorage.getItem('theme');
-        const systemPrefersDark = window.matchMedia('(prefers-color-scheme: dark)').matches;
-        const isInitialDark = storedTheme === 'dark' || (!storedTheme && systemPrefersDark);
-
-        if (isInitialDark) {
-            html.classList.add('dark');
-        } else {
-            html.classList.remove('dark');
-        }
-        updateThemeIcons(isInitialDark);
-
-        themeToggle.addEventListener('click', () => {
-            html.classList.add('transition-theme');
-            const isDark = html.classList.toggle('dark');
-            localStorage.setItem('theme', isDark ? 'dark' : 'light');
-            updateThemeIcons(isDark);
-            setTimeout(() => html.classList.remove('transition-theme'), 350);
+        // Initialize AOS (Animate On Scroll library)
+        AOS.init({
+            duration: 800, // Animation duration
+            once: true,    // Whether animation should happen only once - while scrolling down
+            offset: 50,    // Offset (in px) from the original trigger point
         });
+
+        // Mobile menu toggle functionality
+        const mobileMenuButton = document.getElementById('mobile-menu-button');
+        const mobileMenuItems = document.getElementById('mobile-menu-items');
+        
+        if (mobileMenuButton && mobileMenuItems) {
+            mobileMenuButton.addEventListener('click', () => {
+                const isExpanded = mobileMenuButton.getAttribute('aria-expanded') === 'true' || false;
+                mobileMenuButton.setAttribute('aria-expanded', !isExpanded);
+                mobileMenuItems.classList.toggle('hidden');
+            });
+        }
+
+        // Update copyright year dynamically
+        const yearSpan = document.getElementById('year');
+        if (yearSpan) {
+            yearSpan.textContent = new Date().getFullYear();
+        }
     </script>
 </body>
 </html>
