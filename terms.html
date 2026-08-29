@@ -1,124 +1,185 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="en" class="dark">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Ghoasted - Terms of Service</title>
     <script src="https://cdn.tailwindcss.com"></script>
-    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@300;400;500;600;700;800;900&display=swap" rel="stylesheet">
+    <script>
+        tailwind.config = {
+            darkMode: 'class',
+            theme: {
+                extend: {
+                    fontFamily: {
+                        sans: ['"Plus Jakarta Sans"', 'sans-serif'],
+                    }
+                }
+            }
+        }
+    </script>
     <style>
-        body {
-            font-family: 'Inter', sans-serif;
-        }
-        .radial-gradient-animation {
-            background: radial-gradient(circle at 50% 50%, rgba(56, 189, 248, 0.15), transparent 60%);
-            animation: pulse 6s infinite;
-        }
-        @keyframes pulse {
-            0%, 100% { opacity: 0.8; transform: scale(1); }
-            50% { opacity: 0.4; transform: scale(1.1); }
+        html.transition-theme,
+        html.transition-theme *,
+        html.transition-theme *::before,
+        html.transition-theme *::after {
+            transition: background-color 300ms ease, border-color 300ms ease, color 200ms ease !important;
         }
     </style>
 </head>
-<body class="bg-gray-950 text-gray-300">
-    <header class="fixed w-full bg-gray-900/80 backdrop-blur-xl z-50 shadow-lg border-b border-gray-800">
-        <nav class="container mx-auto px-6 py-4 flex justify-between items-center">
-            <a href="index.html" class="flex items-center gap-3">
-                <div class="w-8 h-8 rounded-lg bg-sky-500 flex items-center justify-center font-black text-white text-lg">G</div>
-                <span class="text-white font-black tracking-widest text-xl">GHOASTED</span>
+<body class="bg-white text-zinc-900 dark:bg-black dark:text-zinc-100 min-h-screen selection:bg-sky-500 selection:text-white transition-colors duration-300 antialiased">
+
+    <!-- Header -->
+    <header class="fixed w-full top-0 z-50 bg-white/80 dark:bg-black/80 backdrop-blur-2xl border-b border-zinc-200/80 dark:border-zinc-800/80">
+        <div class="max-w-6xl mx-auto px-6 h-20 flex items-center justify-between">
+            <a href="index.html" class="flex items-center gap-3 group">
+                <div class="w-10 h-10 rounded-2xl bg-zinc-950 dark:bg-white text-white dark:text-black flex items-center justify-center font-black text-xl shadow-md group-hover:scale-105 transition-transform duration-300">
+                    G
+                </div>
+                <div class="flex flex-col">
+                    <span class="font-black tracking-[0.2em] text-lg text-zinc-950 dark:text-white">GHOASTED</span>
+                    <span class="text-[10px] tracking-widest text-zinc-400 dark:text-zinc-500 uppercase -mt-1 font-bold">Focus Engine</span>
+                </div>
             </a>
-            
-            <div class="flex gap-6">
-                <a href="index.html" class="hover:text-sky-400 text-sm font-medium transition-colors">Home</a>
-                <a href="terms.html" class="text-sky-400 text-sm font-medium transition-colors">Terms of Service</a>
-                <a href="privacy-policy.html" class="hover:text-sky-400 text-sm font-medium transition-colors">Privacy Policy</a>
+
+            <div class="flex items-center gap-6">
+                <nav class="hidden sm:flex items-center gap-6 text-sm font-semibold text-zinc-600 dark:text-zinc-400">
+                    <a href="index.html" class="hover:text-zinc-950 dark:hover:text-white transition-colors">Home</a>
+                    <a href="terms.html" class="text-sky-500 font-bold">Terms of Service</a>
+                    <a href="privacy-policy.html" class="hover:text-zinc-950 dark:hover:text-white transition-colors">Privacy Policy</a>
+                </nav>
+
+                <!-- Theme Toggle Button -->
+                <button id="theme-toggle" aria-label="Toggle Theme" class="w-11 h-11 rounded-2xl border border-zinc-200 dark:border-zinc-800 bg-zinc-100/80 dark:bg-zinc-900/80 hover:bg-zinc-200 dark:hover:bg-zinc-800 text-zinc-700 dark:text-zinc-300 flex items-center justify-center transition-all duration-300 active:scale-95 shadow-sm">
+                    <svg id="sun-icon" class="w-5 h-5 hidden" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2">
+                        <path stroke-linecap="round" stroke-linejoin="round" d="M12 3v1m0 16v1m9-9h-1M4 12H3m15.364 6.364l-.707-.707M6.343 6.343l-.707-.707m12.728 0l-.707.707M6.343 17.657l-.707.707M16 12a4 4 0 11-8 0 4 4 0 018 0z" />
+                    </svg>
+                    <svg id="moon-icon" class="w-5 h-5 hidden" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2">
+                        <path stroke-linecap="round" stroke-linejoin="round" d="M20.354 15.354A9 9 0 018.646 3.646 9.003 9.003 0 0012 21a9.003 9.003 0 008.354-5.646z" />
+                    </svg>
+                </button>
             </div>
-        </nav>
+        </div>
     </header>
 
-    <section class="pt-32 pb-20 px-4 relative overflow-hidden">
-        <div class="absolute inset-0 radial-gradient-animation"></div>
-        <div class="container mx-auto max-w-4xl relative z-10">
-            <div class="text-center mb-12">
-                <h1 class="text-4xl md:text-5xl font-extrabold mb-4">
-                    <span class="bg-gradient-to-r from-sky-400 to-blue-600 bg-clip-text text-transparent">
-                        Terms of Service
-                    </span>
-                </h1>
-                <p class="text-gray-400 mt-2">App: <strong>Ghoasted</strong> (hm.bytefy.ghoasted)</p>
-                <p class="text-sm text-gray-500">Last updated: August 29, 2026</p>
-            </div>
-            
-            <div class="bg-gray-900/90 border border-gray-800 p-8 md:p-12 rounded-3xl shadow-2xl space-y-8 leading-relaxed">
-                
-                <section>
-                    <h2 class="text-2xl font-bold text-white mb-3">1. Agreement to Terms</h2>
-                    <p>
-                        By installing or using <strong>Ghoasted</strong> ("Application", "Service"), provided by <strong>ByteFy</strong>, you agree to be bound by these Terms of Service. If you disagree with any part of these terms, you must not use the Application.
-                    </p>
-                </section>
-
-                <section>
-                    <h2 class="text-2xl font-bold text-white mb-3">2. Description of Service</h2>
-                    <p>
-                        Ghoasted is a digital wellness, app blocker, and self-discipline utility designed to help users limit screen time, eliminate distractions, build productive habits, and schedule app accessibility restrictions.
-                    </p>
-                </section>
-
-                <section>
-                    <h2 class="text-2xl font-bold text-white mb-3">3. User Responsibilities & Lockdown Rules</h2>
-                    <p class="mb-3">
-                        When you configure rules (such as Time Locks, Location Locks, Wi-Fi Locks, or Self-Discipline Shields), Ghoasted actively enforces your chosen restrictions.
-                    </p>
-                    <ul class="list-disc list-inside text-sm space-y-2 text-gray-300">
-                        <li>You acknowledge that enabling lockdown modes will restrict your access to chosen applications during designated times or geofences.</li>
-                        <li>Emergency snooze/grace mechanisms are provided per app according to your settings.</li>
-                        <li>You agree not to attempt circumventing or exploiting device security features contrary to your intended focus settings.</li>
-                    </ul>
-                </section>
-
-                <section>
-                    <h2 class="text-2xl font-bold text-white mb-3">4. Google Drive Cloud Vault</h2>
-                    <p>
-                        The optional cloud backup feature connects to your personal Google Drive account using Google's secure OAuth 2.0 protocol. You retain full ownership and control over your backup files stored in your private Google Drive AppData folder.
-                    </p>
-                </section>
-
-                <section>
-                    <h2 class="text-2xl font-bold text-white mb-3">5. Disclaimer of Warranties</h2>
-                    <p>
-                        The Application is provided on an "AS IS" and "AS AVAILABLE" basis. While we strive to maintain uninterrupted enforcement and stability, ByteFy makes no warranties that the service will be entirely error-free or uninterrupted across all custom OEM Android distributions.
-                    </p>
-                </section>
-
-                <section>
-                    <h2 class="text-2xl font-bold text-white mb-3">6. Limitation of Liability</h2>
-                    <p>
-                        In no event shall ByteFy or its developers be liable for any indirect, incidental, special, consequential, or punitive damages resulting from your use or inability to use the Application or blocked applications.
-                    </p>
-                </section>
-
-                <section>
-                    <h2 class="text-2xl font-bold text-white mb-3">7. Changes to Terms</h2>
-                    <p>
-                        We reserve the right to modify these terms at any time. Continued use of the Application after revisions constitutes acceptance of the updated terms.
-                    </p>
-                </section>
-
-                <section>
-                    <h2 class="text-2xl font-bold text-white mb-3">8. Contact Us</h2>
-                    <p>If you have any questions regarding these Terms of Service, contact us at:</p>
-                    <p class="mt-2 text-sky-400 font-semibold">Email: storex.hm@gmail.com</p>
-                </section>
-
-            </div>
+    <!-- Content -->
+    <main class="pt-36 pb-24 px-6 max-w-4xl mx-auto">
+        <div class="text-center mb-12">
+            <span class="text-xs font-black tracking-widest text-sky-500 uppercase">Legal Agreement</span>
+            <h1 class="text-4xl sm:text-5xl font-black tracking-tight text-zinc-950 dark:text-white mt-2 mb-4">
+                Terms of Service
+            </h1>
+            <p class="text-sm text-zinc-500">Effective Date: August 29, 2026 • Application: Ghoasted (hm.bytefy.ghoasted)</p>
         </div>
-    </section>
 
-    <footer class="bg-gray-900 border-t border-gray-800 py-8 text-center text-sm text-gray-500">
-        <div class="container mx-auto px-4">
-            <p>© 2026 ByteFy. All rights reserved.</p>
+        <div class="space-y-8 bg-zinc-50/80 dark:bg-zinc-900/60 border border-zinc-200/80 dark:border-zinc-800/80 p-8 sm:p-12 rounded-3xl shadow-xl backdrop-blur-xl leading-relaxed text-zinc-700 dark:text-zinc-300">
+            
+            <section>
+                <h2 class="text-2xl font-bold text-zinc-950 dark:text-white mb-3">1. Agreement to Terms</h2>
+                <p>
+                    By downloading, installing, or utilizing <strong>Ghoasted</strong> ("Application", "Service"), provided by <strong>ByteFy</strong> ("we", "us", or "our"), you agree to abide by these Terms of Service. If you do not accept these terms, please discontinue using and uninstall the Application.
+                </p>
+            </section>
+
+            <section>
+                <h2 class="text-2xl font-bold text-zinc-950 dark:text-white mb-3">2. Description of the Application</h2>
+                <p>
+                    Ghoasted is an on-device digital discipline and screen-time management tool. It enables users to schedule application lockouts, configure granular location geofences, establish mandatory usage cooldown breaks, silence distracting push notifications, and earn screen-time via productive reward apps.
+                </p>
+            </section>
+
+            <section>
+                <h2 class="text-2xl font-bold text-zinc-950 dark:text-white mb-3">3. User Responsibilities & Enforcement</h2>
+                <p class="mb-3">
+                    You understand that configuring active enforcement rules will temporarily block access to selected applications.
+                </p>
+                <ul class="list-disc list-inside space-y-2 text-sm text-zinc-600 dark:text-zinc-400">
+                    <li><strong>Self-Discipline Shield:</strong> When active, modifications to locked app rules are safely queued until lockdown completes to prevent impulsive bypassing.</li>
+                    <li><strong>Emergency Snooze:</strong> A daily emergency grace snooze is provided according to your configuration.</li>
+                    <li><strong>Compliance:</strong> You agree to use the Application in compliance with all applicable local, state, and international regulations.</li>
+                </ul>
+            </section>
+
+            <section>
+                <h2 class="text-2xl font-bold text-zinc-950 dark:text-white mb-3">4. Google Drive Cloud Vault</h2>
+                <p>
+                    If you elect to use the optional Google Drive Backup feature, your rule configurations are saved into your private Google Drive AppData folder. You maintain full ownership and control of your backed up files.
+                </p>
+            </section>
+
+            <section>
+                <h2 class="text-2xl font-bold text-zinc-950 dark:text-white mb-3">5. Disclaimer of Warranties</h2>
+                <p>
+                    The Application is provided "AS IS" and "AS AVAILABLE". ByteFy does not warrant that the application will function uninterruptedly across every customized Android OEM skin or battery-saving optimization layer.
+                </p>
+            </section>
+
+            <section>
+                <h2 class="text-2xl font-bold text-zinc-950 dark:text-white mb-3">6. Limitation of Liability</h2>
+                <p>
+                    To the maximum extent permitted by law, ByteFy shall not be liable for any indirect, incidental, special, or consequential damages resulting from your use of or inability to access blocked applications.
+                </p>
+            </section>
+
+            <section>
+                <h2 class="text-2xl font-bold text-zinc-950 dark:text-white mb-3">7. Contact Information</h2>
+                <p>
+                    For inquiries or support regarding these terms, contact us at: <a href="mailto:storex.hm@gmail.com" class="text-sky-500 font-semibold hover:underline">storex.hm@gmail.com</a>
+                </p>
+            </section>
+
+        </div>
+    </main>
+
+    <!-- Footer -->
+    <footer class="border-t border-zinc-200 dark:border-zinc-800 py-12 px-6 bg-white dark:bg-black transition-colors text-center text-sm text-zinc-500">
+        <div class="max-w-6xl mx-auto flex flex-col sm:flex-row items-center justify-between gap-4">
+            <p>© 2026 ByteFy Technologies. All rights reserved.</p>
+            <div class="flex gap-6 font-medium">
+                <a href="index.html" class="hover:text-zinc-900 dark:hover:text-white">Home</a>
+                <a href="privacy-policy.html" class="hover:text-zinc-900 dark:hover:text-white">Privacy Policy</a>
+                <a href="mailto:storex.hm@gmail.com" class="hover:text-zinc-900 dark:hover:text-white">Contact</a>
+            </div>
         </div>
     </footer>
+
+    <!-- Theme Logic -->
+    <script>
+        const html = document.documentElement;
+        const themeToggle = document.getElementById('theme-toggle');
+        const sunIcon = document.getElementById('sun-icon');
+        const moonIcon = document.getElementById('moon-icon');
+
+        function updateThemeIcons(isDark) {
+            if (isDark) {
+                sunIcon.classList.remove('hidden');
+                moonIcon.classList.add('hidden');
+            } else {
+                sunIcon.classList.add('hidden');
+                moonIcon.classList.remove('hidden');
+            }
+        }
+
+        const storedTheme = localStorage.getItem('theme');
+        const systemPrefersDark = window.matchMedia('(prefers-color-scheme: dark)').matches;
+        const isInitialDark = storedTheme === 'dark' || (!storedTheme && systemPrefersDark);
+
+        if (isInitialDark) {
+            html.classList.add('dark');
+        } else {
+            html.classList.remove('dark');
+        }
+        updateThemeIcons(isInitialDark);
+
+        themeToggle.addEventListener('click', () => {
+            html.classList.add('transition-theme');
+            const isDark = html.classList.toggle('dark');
+            localStorage.setItem('theme', isDark ? 'dark' : 'light');
+            updateThemeIcons(isDark);
+            setTimeout(() => html.classList.remove('transition-theme'), 350);
+        });
+    </script>
 </body>
 </html>
