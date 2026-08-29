@@ -3,21 +3,17 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>ByteFy - Digital Solutions & Services</title>
+    <title>Ghoasted - Digital Focus & App Blocking</title>
     <script src="https://cdn.tailwindcss.com"></script>
-    <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
-    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800;900&display=swap" rel="stylesheet">
     <style>
-        /* Custom styles in addition to Tailwind */
         body {
-            font-family: 'Inter', sans-serif; /* Ensure Inter font is applied */
+            font-family: 'Inter', sans-serif;
         }
-
         .radial-gradient-animation {
             background: radial-gradient(circle at 50% 50%, rgba(56, 189, 248, 0.15), transparent 60%);
             animation: pulse 6s infinite;
         }
-
         @keyframes pulse {
             0%, 100% { opacity: 0.8; transform: scale(1); }
             50% { opacity: 0.4; transform: scale(1.1); }
@@ -25,274 +21,120 @@
     </style>
 </head>
 <body class="bg-gray-950 text-gray-300">
-    <header class="fixed w-full bg-gray-900/70 backdrop-blur-xl z-50 shadow-lg">
-        <nav class="container mx-auto px-4 py-4 flex justify-between items-center">
-            <a href="#home" class="flex items-center gap-2">
-                <svg class="w-8 h-8 text-sky-500" viewBox="0 0 32 32" fill="currentColor">
-                    <path d="M16 2L2 16l14 14 14-14L16 2zm0 2.828L27.172 16 16 27.172 4.828 16 16 4.828z"/>
-                    <path d="M16 8L8 16l8 8 8-8-8-8zm0 2.828L21.172 16 16 21.172 10.828 16 16 10.828z"/>
-                </svg>
-                <span class="text-white font-bold text-xl">ByteFy</span>
+    <header class="fixed w-full bg-gray-900/80 backdrop-blur-xl z-50 shadow-lg border-b border-gray-800">
+        <nav class="container mx-auto px-6 py-4 flex justify-between items-center">
+            <a href="index.html" class="flex items-center gap-3">
+                <div class="w-8 h-8 rounded-lg bg-sky-500 flex items-center justify-center font-black text-white text-lg">G</div>
+                <span class="text-white font-black tracking-widest text-xl">GHOASTED</span>
             </a>
             
-            <div class="hidden md:flex gap-8">
-                <a href="#services" class="hover:text-sky-400 transition-colors">Services</a>
-                <a href="#products" class="hover:text-sky-400 transition-colors">Tools</a>
-                <a href="#store" class="hover:text-sky-400 transition-colors">Store</a>
-                <a href="#contact" class="hover:text-sky-400 transition-colors">Contact</a>
-                <a href="privacy-policy.html" class="hover:text-sky-400 transition-colors">Privacy Policy</a>
+            <div class="flex gap-6">
+                <a href="#features" class="hover:text-sky-400 text-sm font-medium transition-colors">Features</a>
+                <a href="terms.html" class="hover:text-sky-400 text-sm font-medium transition-colors">Terms of Service</a>
+                <a href="privacy-policy.html" class="hover:text-sky-400 text-sm font-medium transition-colors">Privacy Policy</a>
             </div>
-
-            <button id="mobile-menu-button" class="md:hidden p-2 rounded-md text-gray-400 hover:text-white hover:bg-gray-700 focus:outline-none focus:ring-2 focus:ring-inset focus:ring-white" aria-expanded="false">
-                <span class="sr-only">Open main menu</span>
-                <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h16"/>
-                </svg>
-            </button>
         </nav>
     </header>
 
-    <div id="mobile-menu-items" class="fixed top-16 right-0 bg-gray-900/95 backdrop-blur-xl w-48 py-4 hidden md:hidden shadow-xl rounded-bl-lg z-40">
-        <div class="flex flex-col gap-4 px-4">
-            <a href="#services" class="block px-3 py-2 rounded-md text-base font-medium text-gray-300 hover:text-sky-400 hover:bg-gray-700">Services</a>
-            <a href="#products" class="block px-3 py-2 rounded-md text-base font-medium text-gray-300 hover:text-sky-400 hover:bg-gray-700">Tools</a>
-            <a href="#store" class="block px-3 py-2 rounded-md text-base font-medium text-gray-300 hover:text-sky-400 hover:bg-gray-700">Store</a>
-            <a href="#contact" class="block px-3 py-2 rounded-md text-base font-medium text-gray-300 hover:text-sky-400 hover:bg-gray-700">Contact</a>
-            <a href="privacy-policy.html" class="block px-3 py-2 rounded-md text-base font-medium text-gray-300 hover:text-sky-400 hover:bg-gray-700">Privacy Policy</a>
-        </div>
-    </div>
-
-    <section id="home" class="min-h-screen pt-32 pb-20 px-4 relative overflow-hidden flex items-center justify-center">
+    <section class="min-h-screen pt-36 pb-20 px-4 relative overflow-hidden flex items-center justify-center">
         <div class="absolute inset-0 radial-gradient-animation"></div>
-        <div class="container mx-auto text-center relative z-10">
-            <h1 class="text-5xl md:text-7xl font-extrabold mb-6" data-aos="fade-down">
-                <span class="bg-gradient-to-r from-sky-400 to-blue-600 bg-clip-text text-transparent">
-                    Digital Solutions
-                </span>
-                <span class="text-white block mt-2 md:mt-4">Reimagined</span>
-            </h1>
-            <p class="text-xl md:text-2xl text-gray-400 mb-10 max-w-2xl mx-auto" data-aos="fade-up" data-aos-delay="200">
-                Transforming ideas into powerful digital experiences through innovative software solutions.
-            </p>
-            <div data-aos="fade-up" data-aos-delay="400">
-                <a href="#services" class="bg-sky-500 hover:bg-sky-600 text-white px-8 py-4 rounded-full text-lg font-semibold transition-colors shadow-lg hover:shadow-sky-500/50 transform hover:scale-105">
-                    Explore Our Expertise
-                </a>
+        <div class="container mx-auto text-center relative z-10 max-w-4xl">
+            <div class="inline-flex items-center gap-2 px-4 py-2 rounded-full bg-sky-500/10 border border-sky-500/30 text-sky-400 text-sm font-semibold mb-6">
+                <span>⚡ Next-Gen Focus & Digital Discipline</span>
             </div>
-        </div>
-    </section>
-
-    <section id="services" class="py-20 px-4 bg-gray-950">
-        <div class="container mx-auto">
-            <div class="text-center mb-16" data-aos="fade-up">
-                <h2 class="text-4xl md:text-5xl font-bold text-white mb-4">Core Development Services</h2>
-                <p class="text-lg text-gray-400 max-w-xl mx-auto">
-                    Expert solutions tailored to your digital needs, from concept to deployment.
-                </p>
-            </div>
-
-            <div class="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
-                <div class="bg-gray-800/60 backdrop-blur-lg p-8 rounded-2xl shadow-xl hover:shadow-sky-500/30 transition-shadow duration-300" data-aos="fade-up" data-aos-delay="100">
-                    <div class="flex items-center justify-center w-16 h-16 bg-sky-500/20 text-sky-400 rounded-full mb-6">
-                        <svg class="w-8 h-8" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 18h.01M8 21h8a2 2 0 002-2V5a2 2 0 00-2-2H8a2 2 0 00-2 2v14a2 2 0 002 2z"/>
-                        </svg>
-                    </div>
-                    <h3 class="text-2xl font-bold text-white mb-3">Mobile Applications</h3>
-                    <p class="text-gray-400 leading-relaxed">Crafting intuitive and high-performance native and cross-platform mobile solutions that captivate and engage your users.</p>
-                </div>
-                
-                <div class="bg-gray-800/60 backdrop-blur-lg p-8 rounded-2xl shadow-xl hover:shadow-sky-500/30 transition-shadow duration-300" data-aos="fade-up" data-aos-delay="200">
-                    <div class="flex items-center justify-center w-16 h-16 bg-sky-500/20 text-sky-400 rounded-full mb-6">
-                        <svg class="w-8 h-8" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                           <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9.75 17L9 20l-1 1h8l-1-1-.75-3M3 13h18M5 17h14a2 2 0 002-2V5a2 2 0 00-2-2H5a2 2 0 00-2 2v10a2 2 0 002 2z"/>
-                        </svg>
-                    </div>
-                    <h3 class="text-2xl font-bold text-white mb-3">Desktop Applications</h3>
-                    <p class="text-gray-400 leading-relaxed">Developing robust and user-friendly desktop software for Windows, macOS, and Linux, tailored to your specific business requirements.</p>
-                </div>
-
-                <div class="bg-gray-800/60 backdrop-blur-lg p-8 rounded-2xl shadow-xl hover:shadow-sky-500/30 transition-shadow duration-300" data-aos="fade-up" data-aos-delay="300">
-                     <div class="flex items-center justify-center w-16 h-16 bg-sky-500/20 text-sky-400 rounded-full mb-6">
-                        <svg class="w-8 h-8" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                           <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M10 20l4-16m4 4l4 4-4 4M6 16l-4-4 4-4"/>
-                        </svg>
-                    </div>
-                    <h3 class="text-2xl font-bold text-white mb-3">Web Development</h3>
-                    <p class="text-gray-400 leading-relaxed">Building responsive, scalable, and secure web applications, from dynamic websites to complex enterprise-level platforms.</p>
-                </div>
-            </div>
-        </div>
-    </section>
-
-    <section id="products" class="py-20 px-4 bg-gray-900/50">
-        <div class="container mx-auto">
-            <div class="text-center mb-16" data-aos="fade-up">
-                <h2 class="text-4xl md:text-5xl font-bold text-white mb-4">Our Flagship Tools</h2>
-                <p class="text-lg text-gray-400 max-w-xl mx-auto">
-                    Powerful and innovative tools designed to streamline your workflows and boost productivity.
-                </p>
-            </div>
-
-            <div class="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
-                <div class="bg-gray-800/60 backdrop-blur-lg p-8 rounded-2xl flex flex-col shadow-xl hover:shadow-sky-500/30 transition-shadow duration-300" data-aos="fade-up" data-aos-delay="100">
-                    <div class="flex items-center justify-center w-16 h-16 bg-sky-500/20 text-sky-400 rounded-full mb-6">
-                        <svg class="w-8 h-8" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 7h6m0 10v-3m-3 3h.01M9 17h.01M9 14h.01M12 14h.01M15 11h.01M12 11h.01M9 11h.01M7 21h10a2 2 0 002-2V5a2 2 0 00-2-2H7a2 2 0 00-2 2v14a2 2 0 002 2z"/>
-                        </svg>
-                    </div>
-                    <h3 class="text-2xl font-bold text-white mb-3">Logs Calculator</h3>
-                    <p class="text-gray-400 mb-6 leading-relaxed flex-grow">An intuitive tool for advanced log analysis, making complex data processing simple and efficient.</p>
-                    <a href="https://play.google.com/store/apps/details?id=hm.logscalculator" target="_blank" rel="noopener noreferrer" class="text-sky-400 hover:text-sky-300 font-semibold mt-auto flex items-center gap-2 group">
-                        Get on Google Play
-                        <svg class="w-5 h-5 transform group-hover:translate-x-1 transition-transform" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M17 8l4 4m0 0l-4 4m4-4H3"/>
-                        </svg>
-                    </a>
-                </div>
             
-
-                <div class="bg-gray-800/60 backdrop-blur-lg p-8 rounded-2xl flex flex-col shadow-xl hover:shadow-sky-500/30 transition-shadow duration-300" data-aos="fade-up" data-aos-delay="400">
-                    <div class="flex items-center justify-center w-16 h-16 bg-sky-500/20 text-sky-400 rounded-full mb-6">
-                        <svg class="w-8 h-8" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
-                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 17v-2m3 2v-4m3 4v-6m2 10H7a2 2 0 01-2-2V5a2 2 0 012-2h5.586a1 1 0 01.707.293l5.414 5.414a1 1 0 01.293.707V19a2 2 0 01-2 2z"></path>
-                        </svg>
-                    </div>
-                    <h3 class="text-2xl font-bold text-white mb-3">InOut - Expense Tracker</h3>
-                    <p class="text-gray-400 mb-6 leading-relaxed flex-grow">Effortlessly track and manage your income and expenses with our intuitive financial tool, designed for clarity and control.</p>
-                    <a href="https://play.google.com/store/apps/details?id=hm.bytefy.inout" target="_blank" rel="noopener noreferrer" class="text-sky-400 hover:text-sky-300 font-semibold mt-auto flex items-center gap-2 group">
-                        Get on Google Play
-                        <svg class="w-5 h-5 transform group-hover:translate-x-1 transition-transform" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M17 8l4 4m0 0l-4 4m4-4H3"/>
-                        </svg>
-                    </a>
-                </div>
-
-                <div class="bg-gray-800/60 backdrop-blur-lg p-8 rounded-2xl flex flex-col shadow-xl hover:shadow-sky-500/30 transition-shadow duration-300" data-aos="fade-up" data-aos-delay="500">
-                    <div class="flex items-center justify-center w-16 h-16 bg-sky-500/20 text-sky-400 rounded-full mb-6">
-                         <svg class="w-8 h-8" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
-                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M16 11V7a4 4 0 00-8 0v4M5 9h14l1 12H4L5 9z"></path>
-                        </svg>
-                    </div>
-                    <h3 class="text-2xl font-bold text-white mb-3">StoreX Inc.</h3>
-                    <p class="text-gray-400 mb-6 leading-relaxed flex-grow">Your all-in-one e-commerce solution for launching, managing, and scaling your online store with powerful features.</p>
-                    <a href="#contact" class="text-sky-400 hover:text-sky-300 font-semibold mt-auto flex items-center gap-2 group">
-                        Learn More
-                        <svg class="w-5 h-5 transform group-hover:translate-x-1 transition-transform" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M17 8l4 4m0 0l-4 4m4-4H3"/>
-                        </svg>
-                    </a>
-                </div>
-            </div>
-        </div>
-    </section>
-    
-    <section id="store" class="py-20 px-4 bg-gray-950">
-        <div class="container mx-auto text-center" data-aos="fade-up">
-            <h2 class="text-4xl md:text-5xl font-bold text-white mb-4">Our Store</h2>
-            <p class="text-lg text-gray-400 mb-12 max-w-xl mx-auto">
-                Discover digital assets, themes, and pre-built components. Coming soon!
+            <h1 class="text-5xl md:text-7xl font-extrabold mb-6 tracking-tight">
+                <span class="bg-gradient-to-r from-sky-400 to-blue-600 bg-clip-text text-transparent">
+                    Reclaim Your Time with
+                </span>
+                <span class="text-white block mt-2">GHOASTED</span>
+            </h1>
+            
+            <p class="text-xl md:text-2xl text-gray-400 mb-10 max-w-2xl mx-auto leading-relaxed">
+                A modern, unbreakable app blocker and self-discipline companion with geofencing, cooldown breaks, time slots, and productive rewards.
             </p>
-            <div class="bg-gray-800/60 backdrop-blur-lg p-12 rounded-2xl shadow-xl">
-                <svg class="w-24 h-24 text-sky-500 mx-auto mb-6" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M3 3h2l.4 2M7 13h10l4-8H5.4M7 13L5.4 5M7 13l-2.293 2.293c-.63.63-.184 1.707.707 1.707H17m0 0a2 2 0 100 4 2 2 0 000-4zm-8 2a2 2 0 11-4 0 2 2 0 014 0z"></path></svg>
-                <h3 class="text-2xl font-bold text-white mb-3">Store Launching Soon</h3>
-                <p class="text-gray-400">We're working hard to bring you a collection of high-quality digital products. Stay tuned!</p>
-            </div>
-        </div>
-    </section>
-
-
-    <section id="contact" class="py-20 px-4">
-        <div class="container mx-auto max-w-2xl">
-            <div class="bg-gray-800/60 backdrop-blur-lg p-8 md:p-12 rounded-2xl shadow-2xl" data-aos="fade-up">
-                <h2 class="text-4xl font-bold text-white text-center mb-8">Let's Build Together</h2>
-                <form class="space-y-6">
-                    <div>
-                        <label for="full-name" class="sr-only">Full Name</label>
-                        <input type="text" id="full-name" name="full-name" placeholder="Full Name" class="w-full bg-gray-700/50 text-gray-200 rounded-lg px-4 py-3 focus:ring-2 focus:ring-sky-500 outline-none transition-shadow" required>
-                    </div>
-                    <div>
-                        <label for="email" class="sr-only">Email Address</label>
-                        <input type="email" id="email" name="email" placeholder="Email Address" class="w-full bg-gray-700/50 text-gray-200 rounded-lg px-4 py-3 focus:ring-2 focus:ring-sky-500 outline-none transition-shadow" required>
-                    </div>
-                    <div>
-                        <label for="message" class="sr-only">Your Message</label>
-                        <textarea id="message" name="message" rows="5" placeholder="Your Message" class="w-full bg-gray-700/50 text-gray-200 rounded-lg px-4 py-3 focus:ring-2 focus:ring-sky-500 outline-none transition-shadow" required></textarea>
-                    </div>
-                    <button type="submit" class="w-full bg-sky-500 hover:bg-sky-600 text-white py-3 rounded-lg font-semibold transition-colors text-lg shadow-md hover:shadow-sky-500/40 transform hover:scale-105">
-                        Send Inquiry
-                    </button>
-                </form>
-            </div>
-        </div>
-    </section>
-
-    <footer class="bg-gray-900 border-t border-gray-800/50">
-        <div class="container mx-auto px-4 py-10 text-center">
-            <div class="mb-6">
-                <a href="#home" class="flex items-center justify-center gap-2 mb-4 group">
-                    <svg class="w-8 h-8 text-sky-500 group-hover:text-sky-400 transition-colors" viewBox="0 0 32 32" fill="currentColor">
-                        <path d="M16 2L2 16l14 14 14-14L16 2zm0 2.828L27.172 16 16 27.172 4.828 16 16 4.828z"/>
-                        <path d="M16 8L8 16l8 8 8-8-8-8zm0 2.828L21.172 16 16 21.172 10.828 16 16 10.828z"/>
-                    </svg>
-                    <span class="text-white font-bold text-xl group-hover:text-sky-400 transition-colors">ByteFy</span>
+            
+            <div class="flex flex-wrap justify-center gap-4">
+                <a href="#features" class="bg-sky-500 hover:bg-sky-600 text-white px-8 py-4 rounded-2xl text-base font-bold transition-all shadow-lg hover:shadow-sky-500/30">
+                    Explore Features
                 </a>
-                <p class="text-gray-400 text-sm">Innovate. Create. Inspire.</p>
+                <a href="privacy-policy.html" class="bg-gray-800/80 hover:bg-gray-700 text-gray-200 border border-gray-700 px-8 py-4 rounded-2xl text-base font-semibold transition-all">
+                    Privacy Policy
+                </a>
             </div>
-            <p class="text-gray-500 text-sm mb-2">84, Moman, Anantnag, Jammu and Kashmir, 192124</p>
-            <p class="text-gray-500 text-sm">&copy; <span id="year"></span> ByteFy. All rights reserved.</p>
+        </div>
+    </section>
+
+    <section id="features" class="py-24 px-4 bg-gray-900/50 border-t border-gray-800">
+        <div class="container mx-auto max-w-6xl">
+            <div class="text-center mb-16">
+                <h2 class="text-4xl font-extrabold text-white mb-4">Engineered for Unmatched Focus</h2>
+                <p class="text-gray-400 max-w-xl mx-auto">Smart enforcement modes to keep distractions out of your day.</p>
+            </div>
+
+            <div class="grid md:grid-cols-3 gap-8">
+                <div class="bg-gray-900 border border-gray-800 p-8 rounded-3xl space-y-4">
+                    <div class="w-12 h-12 rounded-2xl bg-sky-500/20 text-sky-400 flex items-center justify-center font-bold text-xl">📍</div>
+                    <h3 class="text-xl font-bold text-white">Location Lock</h3>
+                    <p class="text-sm text-gray-400 leading-relaxed">
+                        Continuous high-precision GPS geofencing. Automatically block or allow apps only within designated radii (5m, 10m, 30m, 50m).
+                    </p>
+                </div>
+
+                <div class="bg-gray-900 border border-gray-800 p-8 rounded-3xl space-y-4">
+                    <div class="w-12 h-12 rounded-2xl bg-sky-500/20 text-sky-400 flex items-center justify-center font-bold text-xl">⏱️</div>
+                    <h3 class="text-xl font-bold text-white">Take a Break & Cooldown</h3>
+                    <p class="text-sm text-gray-400 leading-relaxed">
+                        Prevents infinite doomscrolling. Sets maximum usage limits with mandatory cooldown lockouts and fresh usage allowances.
+                    </p>
+                </div>
+
+                <div class="bg-gray-900 border border-gray-800 p-8 rounded-3xl space-y-4">
+                    <div class="w-12 h-12 rounded-2xl bg-sky-500/20 text-sky-400 flex items-center justify-center font-bold text-xl">🎁</div>
+                    <h3 class="text-xl font-bold text-white">Get Rewarded</h3>
+                    <p class="text-sm text-gray-400 leading-relaxed">
+                        Earn entertaining screen time only by putting productive screen time into learning, fitness, or reading apps.
+                    </p>
+                </div>
+
+                <div class="bg-gray-900 border border-gray-800 p-8 rounded-3xl space-y-4">
+                    <div class="w-12 h-12 rounded-2xl bg-sky-500/20 text-sky-400 flex items-center justify-center font-bold text-xl">🔕</div>
+                    <h3 class="text-xl font-bold text-white">Always-On Notification Silence</h3>
+                    <p class="text-sm text-gray-400 leading-relaxed">
+                        Automatically dismisses and silences notifications for apps during their active lockdown states.
+                    </p>
+                </div>
+
+                <div class="bg-gray-900 border border-gray-800 p-8 rounded-3xl space-y-4">
+                    <div class="w-12 h-12 rounded-2xl bg-sky-500/20 text-sky-400 flex items-center justify-center font-bold text-xl">🛡️</div>
+                    <h3 class="text-xl font-bold text-white">Self-Discipline Shield</h3>
+                    <p class="text-sm text-gray-400 leading-relaxed">
+                        Never bypass your own rules during weak moments. Rule modifications are safely queued until lockdown completes.
+                    </p>
+                </div>
+
+                <div class="bg-gray-900 border border-gray-800 p-8 rounded-3xl space-y-4">
+                    <div class="w-12 h-12 rounded-2xl bg-sky-500/20 text-sky-400 flex items-center justify-center font-bold text-xl">☁️</div>
+                    <h3 class="text-xl font-bold text-white">Google Drive Cloud Vault</h3>
+                    <p class="text-sm text-gray-400 leading-relaxed">
+                        WhatsApp-style isolated Google Drive backup. Sync and restore all app rules, schedules, and groups with one tap.
+                    </p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <footer class="bg-gray-950 border-t border-gray-800 py-12 text-center text-sm text-gray-500">
+        <div class="container mx-auto px-4 space-y-4">
+            <div class="flex justify-center gap-6 text-gray-400">
+                <a href="terms.html" class="hover:text-white transition-colors">Terms of Service</a>
+                <span>•</span>
+                <a href="privacy-policy.html" class="hover:text-white transition-colors">Privacy Policy</a>
+                <span>•</span>
+                <a href="mailto:storex.hm@gmail.com" class="hover:text-white transition-colors">Contact</a>
+            </div>
+            <p>© 2026 ByteFy. All rights reserved.</p>
         </div>
     </footer>
-
-    <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
-    <script>
-        // Initialize AOS (Animate On Scroll library)
-        AOS.init({
-            duration: 800, // Animation duration
-            once: true,    // Whether animation should happen only once - while scrolling down
-            offset: 50,    // Offset (in px) from the original trigger point
-        });
-
-        // Mobile menu toggle functionality
-        const mobileMenuButton = document.getElementById('mobile-menu-button');
-        const mobileMenuItems = document.getElementById('mobile-menu-items');
-        
-        if (mobileMenuButton && mobileMenuItems) {
-            mobileMenuButton.addEventListener('click', () => {
-                const isExpanded = mobileMenuButton.getAttribute('aria-expanded') === 'true' || false;
-                mobileMenuButton.setAttribute('aria-expanded', !isExpanded);
-                mobileMenuItems.classList.toggle('hidden');
-            });
-        }
-
-        // Update copyright year dynamically
-        const yearSpan = document.getElementById('year');
-        if (yearSpan) {
-            yearSpan.textContent = new Date().getFullYear();
-        }
-
-        // Smooth scroll for navigation links
-        document.querySelectorAll('a[href^="#"]').forEach(anchor => {
-            anchor.addEventListener('click', function (e) {
-                e.preventDefault();
-                const targetId = this.getAttribute('href');
-                const targetElement = document.querySelector(targetId);
-
-                if (targetElement) {
-                    targetElement.scrollIntoView({
-                        behavior: 'smooth',
-                        block: 'start'
-                    });
-                    // If mobile menu is open, close it after clicking a link
-                    if (mobileMenuItems && !mobileMenuItems.classList.contains('hidden')) {
-                        mobileMenuItems.classList.add('hidden');
-                        if (mobileMenuButton) {
-                             mobileMenuButton.setAttribute('aria-expanded', 'false');
-                        }
-                    }
-                }
-            });
-        });
-    </script>
 </body>
 </html>
